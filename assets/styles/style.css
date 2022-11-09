@@ -32,13 +32,15 @@ a {
 
 /* register/log-in page */
 .form-container {
-  width: 30%;
+  width: 40%;
   margin: 0 auto;
   background-color: white;
   border-radius: 10px;
   padding-top: 2%;
   padding-bottom: 3%;
   border: 1px solid black;
+  position: absolute;
+  right: 30%;
 }
 .form-item {
   padding-left: 7%;
@@ -72,6 +74,8 @@ a {
 /*personal page*/
 .event-container {
   display: flex;
+  position: absolute;
+  width: 100%;
 }
 .event {
   width: 20%;
@@ -98,5 +102,33 @@ a {
   justify-content: center;
   align-items: center;
   margin-top: 5px;
+}
+
+.bg-container {
+  display: flex;
+}
+.semicircle {
+  border-radius: 0 200px  200px  0;
+  background-color: white;
+  height: 280px;
+  width: 140px;
+  margin-top: 70px;
+}
+
+.circle {
+  height: 200px;
+  width: 200px;
+  border-radius: 200px;
+  background-color: white;
+  margin-top: 70px;
+  margin-left: 70%;
+}
+
+.bg-gray {
+  height: 120px;
+  width: 100%;
+  background-color: #b8cce4;
+  transition:all 0.10s ease-in-out;
+  border-radius: 70%/100px 100px 0 0;
 }
 /* /personal page*/

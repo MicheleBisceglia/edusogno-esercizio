@@ -57,6 +57,11 @@ if(!isset($_SESSION['logged']) || $_SESSION['logged'] !== true){
       </div>
     </div>
     <!-- /events -->
+    <div class="bg-container">
+      <div class="semicircle"></div>
+      <div class="circle"></div>
+    </div>
+    <div class="bg-gray"></div>
   </div>
   <!-- /Main -->
 </body>

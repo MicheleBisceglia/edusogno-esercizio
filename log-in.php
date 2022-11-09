@@ -42,7 +42,11 @@
     </div>
     
     <!-- /log-in form -->
-
+    <div class="bg-container">
+      <div class="semicircle"></div>
+      <div class="circle"></div>
+    </div>
+    <div class="bg-gray"></div>
   </div>
   <!-- /Main -->
 </body>
