@@ -19,6 +19,8 @@ header {
   margin-top: 3%;
   margin-bottom: 1%;
 }
+
+/* register/log-in page */
 .form-container {
   width: 30%;
   margin: 0 auto;
@@ -54,3 +56,36 @@ header {
   justify-content: center;
   align-items: center;
 }
+/* register/log-in page */
+
+/*personal page*/
+.event-container {
+  display: flex;
+}
+.event {
+  width: 20%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  padding-top: 2%;
+  padding-bottom: 3%;
+  padding-left: 3%;
+  padding-bottom: 4%;
+  border: 1px solid black;
+}
+.event h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.event-btn {
+  width: 88%;
+  height: 30px;
+  background-color: #0057ff;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+/* /personal page*/
