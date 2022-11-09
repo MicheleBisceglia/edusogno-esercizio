@@ -23,7 +23,7 @@
 
     <!-- log-in form -->
     <div class="form-container">
-      <form action="">
+      <form action="php/login.php" method="POST">
         <div class="form-item">
           <label for="email">Inserisci la tua e-mail</label> <br>
           <input type="email" id="email" name="email" placeholder="name@example.com">
@@ -34,13 +34,10 @@
           <input type="password" id="password" name="password" placeholder="Scrivila qui">
         </div>
 
+        <input type="submit" value="ACCEDI" class="form-btn">
       </form>
-
-      <div class="form-btn">
-        Accedi
-      </div>
       <div class="link">
-        <a href="index.php">Hai già un account?Accedi!</a>
+        <a href="index.php">Non hai un progilo?Registrati!</a>
       </div>
     </div>
     

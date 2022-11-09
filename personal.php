@@ -1,3 +1,14 @@
+<?php
+session_start();
+if(!isset($_SESSION['logged']) || $_SESSION['logged'] !== true){
+  header("location: log-in.php");
+  exit;
+
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +17,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edusogno</title>
-    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="./assets/styles/style.css">
 </head>
 <body>
   <!-- Header -->
@@ -16,7 +27,9 @@
   <!-- Main -->
   <div class="container">
     <h1 class="title">
-      Ciao Nome ecco i tuoi eventi
+      <?php
+      echo "Ciao " . $_SESSION["nome"] . " ecco i tuoi eventi"
+      ?>
     </h1>
 
     <!-- events -->
