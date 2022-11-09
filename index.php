@@ -49,9 +49,9 @@
       <div class="form-btn">
         Registrati
       </div>
-    <!-- /Register form -->
-
     </div>
+    <!-- /Register form -->
+    
   </div>
   <!-- /Main -->
 </body>
