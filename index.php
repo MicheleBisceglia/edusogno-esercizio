@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="./assets/styles/style.css">
     <title>Edusogno</title>
 </head>
 
@@ -24,34 +24,35 @@
     
     <!-- Register form -->
     <div class="form-container">
-      <form action="">
+      <form action="php/register.php" method="POST">
         <div class="form-item">
           <label for="nome">Inserisci il tuo nome</label> <br>
-          <input type="text" name="nome" placeholder="Mario">
+          <input type="text" id="nome" name="nome" required placeholder="Mario">
         </div>
 
         <div class="form-item">
           <label for="cognome">Inserisci il tuo cognome</label> <br>
-          <input type="text" name="cognome" placeholder="Rossi">
+          <input type="text" id="cognome" name="cognome" required placeholder="Rossi">
         </div>
 
         <div class="form-item">
           <label for="email">Inserisci la tua e-mail</label> <br>
-          <input type="email" id="email" placeholder="name@example.com">
+          <input type="email" id="email" name="email" required placeholder="name@example.com">
         </div>
 
         <div class="form-item">
           <label for="password">Inserisci la tua password</label> <br>
-          <input type="password" name="password" placeholder="Scrivila qui">
+          <input type="password" id="password" name="password" required placeholder="Scrivila qui">
         </div>
+        <input type="submit" value="REGISTRATI" class="form-btn">
       </form>
-
-      <div class="form-btn">
-        Registrati
+      <div class="link">
+        <a href="log-in.php">Hai già un account?Accedi!</a>
       </div>
+
     </div>
     <!-- /Register form -->
-    
+
   </div>
   <!-- /Main -->
 </body>

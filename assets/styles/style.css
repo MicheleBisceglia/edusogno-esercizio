@@ -13,6 +13,15 @@ header {
   width: 100%;
   background-color: white;
 }
+a {
+  color: black;
+  text-transform: none;
+}
+.link {
+  text-align: center;
+  margin-top: 10px;
+  font-size: small;
+}
 .title {
   text-align: center;
   color: #134077;
@@ -51,6 +60,7 @@ header {
   height: 30px;
   background-color: #0057ff;
   color: white;
+  border: transparent;
   border-radius: 5px;
   display: flex;
   justify-content: center;
