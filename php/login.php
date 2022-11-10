@@ -4,6 +4,7 @@ require_once('config.php');
 $nome = $connection->real_escape_string($_POST['nome']);
 $email = $connection->real_escape_string($_POST['email']);
 $password = $connection->real_escape_string($_POST['password']);
+$attendes = $connection->real_escape_string($_POST['attendes']);
 
 if($_SERVER["REQUEST_METHOD"] === "POST"){
   $sql_select = "SELECT * FROM utenti WHERE email = '$email'";
@@ -28,6 +29,6 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
   }else{
     echo "errore in fase di login";
   }
-  $connection->close();
+  
 }
 ?>

@@ -1,12 +1,10 @@
 <?php
-session_start();
-if(!isset($_SESSION['logged']) || $_SESSION['logged'] !== true){
-  header("location: log-in.php");
-  exit;
-
-}
-
-
+  session_start();
+  if(!isset($_SESSION['logged']) || $_SESSION['logged'] !== true){
+    header("location: log-in.php");
+    exit;
+  }
+  include __DIR__ . '/php/events.php'; 
 ?>
 
 <!DOCTYPE html>
@@ -31,31 +29,26 @@ if(!isset($_SESSION['logged']) || $_SESSION['logged'] !== true){
       echo "Ciao " . $_SESSION["nome"] . " ecco i tuoi eventi"
       ?>
     </h1>
-
-    <!-- events -->
     <div class="event-container">
-      <div class="event">
-        <h3>Nome evento</h3>
-        <p>15-03-03</p>
-        <div class="event-btn">
-          JOIN
-        </div> 
-      </div>
-      <div class="event">
-        <h3>Nome evento</h3>
-        <p>15-03-03</p>
-        <div class="event-btn">
-          JOIN
-        </div> 
-      </div>
-      <div class="event">
-        <h3>Nome evento</h3>
-        <p>15-03-03</p>
-        <div class="event-btn">
-          JOIN
-        </div> 
-      </div>
+      <?php if (count($events) > 0) : ?>
+        <?php foreach ($events as $event ) : ?>
+          <div class="event">
+            <h2><?= $event['nome_evento'] ?></h2>
+            <p><?= $event['data_evento'] ?></p>
+            <div class="event-btn">
+              JOIN
+            </div> 
+          </div>
+        <?php endforeach; ?>
+        <?php else : ?>
+          <div class="event-container">
+            <div class="event">
+              <h2>Al momento non ci sono eventi, torna più tardi!</h2>
+            </div>
+          </div>
+      <?php endif; ?>
     </div>
+
     <!-- /events -->
     <div class="bg-container">
       <div class="semicircle"></div>

@@ -3,6 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+html, body {
+  overflow: hidden;
+}  
 body {
   background-color: #cbdaec;
   max-height: 100vh;
@@ -74,18 +77,16 @@ a {
 /*personal page*/
 .event-container {
   display: flex;
+  justify-content: center;
   position: absolute;
   width: 100%;
 }
 .event {
   width: 20%;
-  margin: 0 auto;
   background-color: white;
   border-radius: 10px;
-  padding-top: 2%;
-  padding-bottom: 3%;
-  padding-left: 3%;
-  padding-bottom: 4%;
+  padding: 4% 3% 4% 3%;
+  margin: 0% 5%;
   border: 1px solid black;
 }
 .event h3 {
