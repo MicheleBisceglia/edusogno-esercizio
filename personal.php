@@ -1,4 +1,7 @@
 <?php
+  include __DIR__ . '/layouts/header.php';
+
+  //inizio sessione una volta effettuato login utente
   session_start();
   if(!isset($_SESSION['logged']) || $_SESSION['logged'] !== true){
     header("location: log-in.php");
@@ -9,7 +12,6 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,11 +20,7 @@
     <link rel="stylesheet" href="./assets/styles/style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header></header>
-  <!-- /Header -->
-
-  <!-- Main -->
+<!-- Main -->
   <div class="container">
     <h1 class="title">
       <?php
@@ -33,7 +31,7 @@
       <?php if (count($events) > 0) : ?>
         <?php foreach ($events as $event ) : ?>
           <div class="event">
-            <h2><?= $event['nome_evento'] ?></h2>
+            <h3><?= $event['nome_evento'] ?></h3>
             <p><?= $event['data_evento'] ?></p>
             <div class="event-btn">
               JOIN
@@ -48,14 +46,12 @@
           </div>
       <?php endif; ?>
     </div>
+  <!-- /events -->
 
-    <!-- /events -->
-    <div class="bg-container">
-      <div class="semicircle"></div>
-      <div class="circle"></div>
-    </div>
-    <div class="bg-gray"></div>
+    <?php
+      include __DIR__ . '/layouts/background.php';
+    ?>
   </div>
-  <!-- /Main -->
+<!-- /Main -->
 </body>
 </html>

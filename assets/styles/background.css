@@ -1,0 +1,27 @@
+/* Background*/
+.bg-container {
+  display: flex;
+}
+.semicircle {
+  border-radius: 0 200px  200px  0;
+  background-color: white;
+  height: 280px;
+  width: 140px;
+  margin-top: 70px;
+}
+.circle {
+  height: 200px;
+  width: 200px;
+  border-radius: 200px;
+  background-color: white;
+  margin-top: 70px;
+  margin-left: 70%;
+}
+.bg-gray {
+  height: 120px;
+  width: 100%;
+  background-color: #b8cce4;
+  transition:all 0.10s ease-in-out;
+  border-radius: 70%/100px 100px 0 0;
+}
+/* /Background*/

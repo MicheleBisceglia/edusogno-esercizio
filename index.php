@@ -1,20 +1,19 @@
+<?php
+  include __DIR__ . '/layouts/header.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/styles/style.css">
+    <script src="assets/js/script.js" ></script>
     <title>Edusogno</title>
 </head>
-
 <body>
-  <!-- Header -->
-  <header></header>
-  <!-- /Header -->
-
-   <!-- Main -->
+<!-- Main -->
   <div class="container">
     <!-- Titolo -->
     <h1 class="title">
@@ -24,7 +23,7 @@
     
     <!-- Register form -->
     <div class="form-container">
-      <form action="php/register.php" method="POST">
+      <form action="php/register.php" method="POST" >
         <div class="form-item">
           <label for="nome">Inserisci il tuo nome</label> <br>
           <input type="text" id="nome" name="nome" required placeholder="Mario">
@@ -42,7 +41,10 @@
 
         <div class="form-item">
           <label for="password">Inserisci la tua password</label> <br>
-          <input type="password" id="password" name="password" required placeholder="Scrivila qui">
+          <div class="form-password">
+            <input  type="password" id="passwordid" name="password" placeholder="Scrivila qui">
+            <i class="fas fa-eye eye" type="button" onclick="showpassword()"></i>
+          </div> 
         </div>
         <input type="submit" value="REGISTRATI" class="form-btn">
       </form>
@@ -52,12 +54,14 @@
 
     </div>
     <!-- /Register form -->
-    <div class="bg-container">
-      <div class="semicircle"></div>
-      <div class="circle"></div>
-    </div>
-    <div class="bg-gray"></div>
+    
+    <?php
+      include __DIR__ . '/layouts/background.php';
+    ?>
   </div>
-  <!-- /Main -->
+<!-- /Main -->
 </body>
 </html>
+
+
+
