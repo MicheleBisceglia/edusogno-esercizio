@@ -24,17 +24,14 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         header("location: ../personal.php");
       }else{
         //Lancio un errore se la password è sbagliata
-        header('location: ../log-in.php');
-        echo'<small class="validator">la password non è corretta</small>';;
+        header('location: ../error.php');
       }
     }else{
         //Lancio un errore se l'email è sbagliata
-        header("location: ../log-in.php");
-        echo "non ci sono account con questa email ";
+        header('location: ../error.php');
     }
   }else{
-    echo "errore in fase di login";
-    header("location: ../log-in.php");
+    header('location: ../error.php');
   }
 }
 ?>

@@ -12,7 +12,7 @@ $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 $sql = "INSERT INTO utenti (nome, cognome, email, password) VALUES ('$nome', '$cognome', '$email', '$hashed_password')";
 if ($connection->query($sql) === true){
 //se la connessione va a buon fine reindirizzo nella pagina di login
-  header("location: ../log-in.php");
+  header("location: ../redirect.php");
 }else{
 //se la connessione non viene portata a termine lancio un messaggio di errore
   echo "Errore durante registrazione utente $sql." . $connection->error;

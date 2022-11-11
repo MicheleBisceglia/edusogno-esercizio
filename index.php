@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
     <script src="assets/js/script.js" ></script>
     <title>Edusogno</title>
 </head>
@@ -42,7 +42,7 @@
         <div class="form-item">
           <label for="password">Inserisci la tua password</label> <br>
           <div class="form-password">
-            <input  type="password" id="passwordid" name="password" placeholder="Scrivila qui">
+            <input type="password" id="password" name="password" placeholder="Scrivila qui">
             <i class="fas fa-eye eye" type="button" onclick="showpassword()"></i>
           </div> 
         </div>
